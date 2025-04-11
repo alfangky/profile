@@ -1,0 +1,519 @@
+/* Global Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Variables */
+    --primary-light: #a970ff;
+    --primary-dark: #8f00ff;
+    --primary-gradient: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2d2d2d;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* ==================== Top Navigation Bar (Common) ==================== */
+.navbarz-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--bg-card);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navz-logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.netlinkerz-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 5s ease infinite;
+}
+
+.searchz-container {
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 var(--spacing-xl);
+}
+
+.searchz-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.searchz-box i {
+    color: var(--text-secondary);
+    margin-right: var(--spacing-sm);
+}
+
+.searchz-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* ==================== Desktop Navigation ==================== */
+.navz-desktop-menu {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.navz-desktop-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-secondary);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.navz-desktop-item i {
+    font-size: 1.1rem;
+}
+
+.navz-desktop-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.navz-desktop-item:hover {
+    color: var(--primary-light);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navz-desktop-active {
+    color: var(--primary-light);
+    background-color: rgba(169, 112, 255, 0.1);
+}
+
+.navz-desktop-active i {
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ==================== Mobile Actions ==================== */
+.navz-mobile-actions {
+    display: none;
+}
+
+.actionz-button-mobile {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.actionz-button-mobile:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== Main Content Area ==================== */
+.mainz-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ==================== Profile Header Section ==================== */
+.profilez-header {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.coverz-photo {
+    height: 200px;
+    background: url('/gambar/sampul.gif') center/cover;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+
+.profilez-picture-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.profilez-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-dark);
+    background: url('/gambar/tutorial/profile1.jpg') center/cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.userz-info {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.userz-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+.userz-bio {
+    color: var(--text-secondary);
+    margin: var(--spacing-md) 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialz-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.socialz-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.socialz-icon:hover {
+    background: var(--primary-gradient);
+    transform: translateY(-3px);
+}
+
+.additionalz-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-md);
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.infoz-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.infoz-item:last-child {
+    margin-bottom: 0;
+}
+
+.infoz-item i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing-md);
+    color: var(--primary-light);
+}
+
+/* ==================== Posts Section ==================== */
+.postz-section {
+    margin-top: var(--spacing-xl);
+}
+
+.sectionz-title {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    padding-left: var(--spacing-md);
+}
+
+.sectionz-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-gradient);
+    border-radius: 4px;
+}
+
+.postz-item {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.postz-item:hover {
+    transform: translateY(-4px);
+}
+
+.postz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+}
+
+.postz-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.postz-user-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url('/gambar/profile1.jpg') center/cover;
+    margin-right: var(--spacing-md);
+}
+
+.postz-user-details h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.postz-user-details span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.postz-actions i {
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+.postz-content {
+    padding: var(--spacing-md);
+}
+
+.postz-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+.postz-image {
+    width: 100%;
+    height: 300px;
+    background: url('/gambar/city.jpg') center/cover;
+    border-radius: 8px;
+}
+
+.second-image {
+    background: url('/gambar/photo.jpg') center/cover;
+}
+
+.postz-engagement {
+    display: flex;
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.engagez-action {
+    display: flex;
+    align-items: center;
+    margin-right: var(--spacing-lg);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.engagez-action:hover {
+    color: var(--primary-light);
+}
+
+.engagez-action i {
+    margin-right: var(--spacing-xs);
+}
+
+/* ==================== Bottom Mobile Navigation Menu ==================== */
+.navbarz-bottom-mobile {
+    display: none; /* Hidden by default, shown on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-card);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    justify-content: space-around;
+}
+
+
+.navz-mobile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: var(--spacing-sm);
+    flex: 1;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.navz-mobile-item i {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-xs);
+    transition: transform 0.3s ease;
+}
+
+.navz-mobile-item span {
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.navz-mobile-active {
+    color: var(--text-primary);
+}
+
+.navz-mobile-active i {
+    transform: translateY(-2px);
+}
+
+/* ==================== Animations ==================== */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==================== Responsive Design ==================== */
+@media screen and (max-width: 992px) {
+    .mainz-content {
+        padding-bottom: 80px; /* Space for bottom nav on mobile */
+    }
+    
+    /* Show mobile navigation and hide desktop navigation */
+    .navbarz-bottom-mobile {
+        display: flex;
+    }
+    
+    .navz-desktop-menu {
+        display: none;
+    }
+    
+    .searchz-container {
+        display: none;
+    }
+    
+    .navz-mobile-actions {
+        display: flex;
+    }
+    
+    /* Top Nav adjustments */
+    .navbarz-top {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    /* Profile adjustments */
+    .coverz-photo {
+        height: 150px;
+    }
+    
+    .profilez-picture {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .userz-name {
+        font-size: 1.5rem;
+    }
+    
+    .additionalz-info {
+        padding: var(--spacing-sm);
+    }
+    
+    .postz-image {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navz-logo-container {
+        flex-grow: 1;
+    }
+}
+.verified-badge {
+    width: 30px;
+    margin-left: -5px;
+    height: 25px;
+    margin-bottom: -5px;
+}
