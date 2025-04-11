@@ -176,7 +176,7 @@ body {
 
 .coverz-photo {
     height: 200px;
-    background: url('/gambar/sampul.gif') center/cover;
+    background: url('sampul.gif') center/cover;
     border-radius: 12px 12px 0 0;
     position: relative;
 }
@@ -193,7 +193,7 @@ body {
     height: 120px;
     border-radius: 50%;
     border: 4px solid var(--bg-dark);
-    background: url('/gambar/tutorial/profile1.jpg') center/cover;
+    background: url('profile1.jpg') center/cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -333,7 +333,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: url('/gambar/profile1.jpg') center/cover;
+    background: url('profile1.jpg') center/cover;
     margin-right: var(--spacing-md);
 }
 
@@ -364,12 +364,12 @@ body {
 .postz-image {
     width: 100%;
     height: 300px;
-    background: url('/gambar/city.jpg') center/cover;
+    background: url('city.jpg') center/cover;
     border-radius: 8px;
 }
 
 .second-image {
-    background: url('/gambar/photo.jpg') center/cover;
+    background: url('photo.jpg') center/cover;
 }
 
 .postz-engagement {
