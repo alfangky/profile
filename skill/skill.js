@@ -297,3 +297,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Any additional mobile-specific initializations can go here
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.navz-mobile-item');
+
+    navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (href && window.location.pathname.includes(href.replace('./', '').replace('../', ''))) {
+            navItems.forEach(el => el.classList.remove('navz-mobile-active'));
+            item.classList.add('navz-mobile-active');
+        }
+    });
+});
